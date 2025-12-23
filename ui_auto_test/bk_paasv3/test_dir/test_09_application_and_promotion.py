@@ -1,0 +1,31 @@
+import seldom
+
+from bk_paasv3.test_dir import test_01_login
+from bk_paasv3.page import application_development
+from public_method.keyboard_operation import MyWebDriver
+
+
+class Application_And_Promotion(seldom.TestCase):
+    def test_01_deployment_restrictions(self):
+        '''开启/关闭应用市场'''
+        # 进入首页
+        test_01_login.Login.test_login(self)
+        # 点击应用开发
+        self.click(xpath=application_development.application_development)
+        # 搜索框搜索应用
+        self.type(xpath=application_development.search_application, text="标准运维")
+        # 模拟enter键
+        MyWebDriver.Keys(xpath=application_development.search_application).enter()
+        # 点击应用
+        self.click(xpath=application_development.click_application)
+        # 应用推广
+        self.click(xpath=application_development.application_and_promotion)
+        # 应用市场
+        self.click(xpath=application_development.application_market)
+        # 关闭应用市场
+        self.click(xpath=application_development.close_application_market)
+        # 断言
+        self.assertText(application_development.assert_close_application_market)
+        # 开启应用市场
+        self.click(xpath=application_development.open_application_market)
+        self.assertText(application_development.assert_open_application_market)
