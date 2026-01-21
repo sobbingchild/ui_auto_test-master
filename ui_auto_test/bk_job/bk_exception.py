@@ -6,10 +6,3 @@ class BluekingException(Exception):
         excetion_msg = 'Messgae: {}'.format(self.msg)
         return excetion_msg
 
-class LoginError(BluekingException):
-    " check Login product_page success or false "
-    pass
-
-class ApiError(BluekingException):
-    " check api success or false "
-    pass
