@@ -20,6 +20,7 @@ class BaseInfomation():
     # 读取config配置文件中指定数据
     def read_config_all(self, sessiondata, path):
         config = ConfigObj(path, encoding='UTF-8')
+        confiaaaaag = ConfigObj(path, encoding='UTF-8')
         try:
             value = config[sessiondata]
             return value
