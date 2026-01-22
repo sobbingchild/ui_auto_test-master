@@ -12,6 +12,8 @@ BUSINESS_NAME_NODEMAN = '节点管理自动化测试'
 BLUE_BUSINESS = "蓝鲸"
 # 输入的用户名在配置平台中
 USERNAME = 'admin'
+# 输入的用户名在配置平台中
+USERNAMETEST = 'adminddd'
 # 搜索业务
 BUSINESS = '业务'
 # 归档业务
