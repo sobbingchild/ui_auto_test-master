@@ -1,6 +1,6 @@
 from configobj import ConfigObj
 aaaddd =int(8888)
-
+aaaddd =int(88aaad88)
 class BaseInfomation():
     def __init__(self):
         pass
